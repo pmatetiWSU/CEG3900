@@ -1,0 +1,98 @@
+# -*- mode: org -*-
+#+date: 2017-03-08
+#+TITLE: CEG 3900: Sample Exam
+#+AUTHOR: Prabhaker Mateti
+#+DESCRIPTION: Mateti: Android Internals and Security
+#+HTML_LINK_HOME: ../../Top/index.html
+#+HTML_LINK_UP: ../
+#+HTML_HEAD: <style> P,li {text-align: justify} code {color: brown;} @media screen {BODY {margin: 10%} }</style>
+#+BIND: org-html-preamble-format (("en" "<a href=\"../../\"> ../../</a>"))
+#+BIND: org-html-postamble-format (("en" "<hr size=1>Copyright &copy; 2017 <a href=\"http://www.wright.edu/~pmateti\">www.wright.edu/~pmateti</a> &bull; %d"))
+#+STARTUP:showeverything
+#+OPTIONS: toc:0
+
+80 minutes 100 points Weight 20%
+
+Use your laptop or a PC while answering.  You are welcome to use
+IdeaJ, and Android Studio + SDK tools, but *not* websites.  Apart from
+these, this is a closed book, closed notes exam.  Do not give or take
+help during the exam.  In particular, you are honor bound not to
+Internet surf or access any content already existing (other than as
+indicated) once you access the exam until you turnin the
+=mt-answers.pdf= and other files.  Please leave wide margins.
+
+* Part I
+
+(5 points each) The following statements may or may not be (fully or
+  partially) valid.  First, explain the _underlined_
+  technical term(s).  Then, explain/ discuss/ dispute the
+  statement.  It is possible to write, say, five, sentences each,
+  and yet receive full score.
+
+1.  An _Android Activity_ always runs in the background.
+
+1.  Even though _Android SDK_ is "complete", there is no
+       command line program that lets you install, un-install, push
+       and pull files on the virtual device -- you have to go to the
+       GUI of the virtual device.
+
+1.  Every Android app must connect with a cloud _service_.
+
+1.  A _client_ runs on the Android device, and a _server_ runs on the
+    PC.
+
+* Part II
+
+(40 points) Develop the following APK using Android Studio.  It is
+being done in the "exam environment", and many imperfections will be
+forgiven.
+
+1.  Here is a link to the code of [[../Lectures/Java8/src/Meenie.java][Eeny Meeny Miny Moe]]
+   threads that we discussed in the lectures.  Turn this into a proper
+   Android APK, with mods as follows.  There are several numbers in
+   the main method: 500, 100, 200, 300, 5000.  In the app, they should
+   be in the "settings".  Replace the System.out.println() with four
+   rectangular areas one for each thread showing the value of int i.
+   Submit the APK and the source code bundle.
+
+* Part III
+
+(10 points each) Answer the following, at the level of Android
+  app development details, Android internals, etc.
+   
+1. Here is a link to [[./anUnknown.apk]].  What activities does it have?
+   How did you discover? What is the best way to discover these?
+
+1. Write the equivalent of Compute, using stream, map and reduce, and
+   without using loops.
+   #+begin_src java
+List <Integer> a = Arrays. asList (12, 32, 45, 54, 65);
+List <Integer> b = Arrays. asList (22, 44, 55, 66, 77);
+
+int Compute() {
+  int r = 0;
+  for (int i = a.length; i > 0; i--) {
+    r += a[i] * b[i];
+  }
+  return r;
+}
+#+end_src
+
+1. Give the pre-condition (assertion) of Compute above as
+   Java assert.
+
+1. Make a simple APK out of the Compute above.  Introduce the app in
+   the first screen.  In subsequent screens, interactively obtain the
+   lists for a and b.  After an OK, invoke Compute(), and show r, the
+   result.      Submit the APK and the source code bundle.
+
+* Part IV
+
+1. (0 points) [For survey purposes only.] Please record your effort in
+   minutes for each of the above items. Other feedback you wish to
+   give is also welcome.
+
+* End
+# Local variables:
+# after-save-hook: org-html-export-to-html
+# end:
